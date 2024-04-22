@@ -1,0 +1,14 @@
+<Window x:Class="ATM.TakeCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Title="TakeCardWindow" Height="1080" Width="1920">
+    <DockPanel LastChildFill="True">
+        <Button Click="DebugButton_Click" DockPanel.Dock="Top">взять (debug)</Button>
+        <TextBlock Style="{StaticResource CommonText}" VerticalAlignment="Center">Возьмите карту</TextBlock>
+    </DockPanel>
+</Window>

@@ -1,0 +1,59 @@
+<Window x:Class="ATM.ChooseServiceFirstWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Title="PinCodeWindow" Width="1920" Height="1080">
+    <DockPanel LastChildFill="True">
+
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Click="ServiceButton_Click" Grid.Row="0" Grid.Column="0" Style="{StaticResource PositiveButton}"
+                    Margin="100 15 100 15">
+                Услуга 1
+            </Button>
+
+            <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource PositiveButton}"
+                    Margin="100 15 100 15">
+                Услуга 3
+            </Button>
+
+            <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource NegativeButton}"
+                    Margin="100 15 100 15">
+                Отмена
+            </Button>
+
+            <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource PositiveButton}"
+                    Margin="100 15 100 15">
+                Услуга 2
+            </Button>
+
+            <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource PositiveButton}"
+                    Margin="100 15 100 15">
+                Услуга 4
+            </Button>
+
+            <Button Click="OtherButton_Click" Grid.Row="2" Grid.Column="1" Style="{StaticResource PositiveButton}"
+                    Margin="100 15 100 15">
+                Другие
+            </Button>
+
+        </Grid>
+        <TextBlock FontSize="80" TextAlignment="Center" DockPanel.Dock="Top" Margin="100 50">
+            Выберите вид <LineBreak />
+            оплачиваемой услуги
+        </TextBlock>
+
+    </DockPanel>
+</Window>

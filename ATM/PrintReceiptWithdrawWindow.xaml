@@ -1,0 +1,33 @@
+<Window x:Class="ATM.PrintReceiptWithdrawWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Title="PinCodeWindow" Width="1920" Height="1080">
+    <DockPanel LastChildFill="True">
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button Click="NoReceipt_Click" Grid.Column="0" Style="{StaticResource NegativeButton}"
+                    Margin="100 15 100 15">
+                Нет
+            </Button>
+
+            <Button Click="YesReceipt_Click" Grid.Column="1" Style="{StaticResource PositiveButton}"
+                    Margin="100 15 100 15">
+                Да
+            </Button>
+        </Grid>
+        <TextBlock FontSize="80" TextAlignment="Center" VerticalAlignment="Center"
+                   DockPanel.Dock="Top"
+                   Margin="100 0">
+            Печатать чек?
+        </TextBlock>
+    </DockPanel>
+</Window>
