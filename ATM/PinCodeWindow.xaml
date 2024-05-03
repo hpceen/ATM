@@ -8,7 +8,14 @@
         WindowStyle="None"
         Title="PinCodeWindow" Width="1920" Height="1080">
     <DockPanel LastChildFill="True">
-        <TextBlock FontSize="80" TextAlignment="Center" DockPanel.Dock="Top" Margin="100 50">Введите пинкод</TextBlock>
+        <TextBlock x:Name="GreetingTextBlock" FontSize="80" TextAlignment="Center" DockPanel.Dock="Top"
+                   Margin="100 50 100 0">
+            Здравствуйте Иван
+        </TextBlock>
+        <TextBlock x:Name="EnterPinTextBlock" FontSize="80" TextAlignment="Center" DockPanel.Dock="Top"
+                   Margin="100 0 100 50">
+            Введите пинкод
+        </TextBlock>
 
         <Grid DockPanel.Dock="Bottom">
             <Grid.RowDefinitions>
@@ -35,7 +42,8 @@
             </Button>
         </Grid>
 
-        <PasswordBox FontSize="80" Width="600" PasswordChar="●" MaxLength="4" VerticalAlignment="Center"
+        <PasswordBox x:Name="PinCodeBox" FontSize="80" Width="600" PasswordChar="●" MaxLength="4"
+                     VerticalAlignment="Center"
                      HorizontalContentAlignment="Center"
                      Background="{StaticResource BLightGray}" />
     </DockPanel>
