@@ -2,9 +2,6 @@
 
 namespace ATM;
 
-/// <summary>
-///     Interaction logic for MainWindow.xaml
-/// </summary>
 public partial class StartWindow : Window
 {
     public StartWindow()

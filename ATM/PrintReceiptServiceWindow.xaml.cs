@@ -2,9 +2,9 @@ using System.Windows;
 
 namespace ATM;
 
-public partial class PrintReceiptDepositWindow : Window
+public partial class PrintReceiptServiceWindow : Window
 {
-    public PrintReceiptDepositWindow()
+    public PrintReceiptServiceWindow()
     {
         InitializeComponent();
     }
@@ -18,7 +18,6 @@ public partial class PrintReceiptDepositWindow : Window
 
     private void YesReceipt_Click(object sender, RoutedEventArgs e)
     {
-        //TODO печать чека DepositWindow
         var takeCardWindow = new TakeCardWindow();
         takeCardWindow.Show();
         Close();

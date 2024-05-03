@@ -22,4 +22,18 @@ public partial class ChooseProcedureWindow : Window
         putBillsWindow.Show();
         Close();
     }
+
+    private void WithdrawButton_Click(object sender, RoutedEventArgs e)
+    {
+        var withdrawWindow = new WithdrawWindow();
+        withdrawWindow.Show();
+        Close();
+    }
+
+    private void ChooseServiceButton_Click(object sender, RoutedEventArgs e)
+    {
+        var chooseServiceFirstWindow = new ChooseServiceFirstWindow();
+        chooseServiceFirstWindow.Show();
+        Close();
+    }
 }

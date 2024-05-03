@@ -11,8 +11,8 @@ public partial class TakeBillsWithdrawWindow : Window
 
     private void TakeBills_Click(object sender, RoutedEventArgs e)
     {
-        var printReceipt = new PrintReceiptDepositWindow();
-        printReceipt.Show();
+        var takeCardWindow = new TakeCardWindow();
+        takeCardWindow.Show();
         Close();
     }
 }

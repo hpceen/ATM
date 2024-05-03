@@ -26,7 +26,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Style="{StaticResource PositiveButton}"
+            <Button Click="ClearButton_Click" Grid.Row="0" Grid.Column="0" Style="{StaticResource PositiveButton}"
                     Margin="100 15 100 15">
                 Очистить
             </Button>
@@ -42,8 +42,7 @@
             </Button>
         </Grid>
 
-        <PasswordBox x:Name="PinCodeBox" FontSize="80" Width="600" PasswordChar="●" MaxLength="4"
-                     VerticalAlignment="Center"
+        <PasswordBox x:Name="PinCodeBox" FontSize="80" Width="600" PasswordChar="●" MaxLength="4" VerticalAlignment="Center"
                      HorizontalContentAlignment="Center"
                      Background="{StaticResource BLightGray}" />
     </DockPanel>

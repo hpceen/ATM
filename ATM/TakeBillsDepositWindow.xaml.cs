@@ -4,7 +4,6 @@ namespace ATM;
 
 public partial class TakeBillsDepositWindow : Window
 {
-    
     public TakeBillsDepositWindow()
     {
         InitializeComponent();
@@ -12,8 +11,8 @@ public partial class TakeBillsDepositWindow : Window
 
     private void TakeBills_Click(object sender, RoutedEventArgs e)
     {
-        var takeCardWindow = new TakeCardWindow();
-        takeCardWindow.Show();
+        var chooseProcedureWindow = new ChooseProcedureWindow();
+        chooseProcedureWindow.Show();
         Close();
     }
 }

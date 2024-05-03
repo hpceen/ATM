@@ -34,4 +34,9 @@ public partial class PinCodeWindow : Window
         chooseProcedureWindow.Show();
         Close();
     }
+
+    private void ClearButton_Click(object sender, RoutedEventArgs e)
+    {
+        PinCodeBox.Password = "";
+    }
 }

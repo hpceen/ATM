@@ -1,11 +1,11 @@
+using System;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace ATM;
 
-public partial class WithdrawWindow : Window
+public partial class ServicePayWindow : Window
 {
-    public WithdrawWindow()
+    public ServicePayWindow(string serviceName)
     {
         InitializeComponent();
     }
@@ -19,9 +19,9 @@ public partial class WithdrawWindow : Window
 
     private void ContinueButton_Click(object sender, RoutedEventArgs e)
     {
-        //TODO Проверка на количество денег на счету
-        var printReceiptWithdrawWindow = new PrintReceiptWithdrawWindow();
-        printReceiptWithdrawWindow.Show();
+        //TODO проверка на количество денег на счету
+        var printReceiptServiceWindow = new PrintReceiptServiceWindow();
+        printReceiptServiceWindow.Show();
         Close();
     }
 

@@ -24,22 +24,22 @@
                 Услуга 1
             </Button>
 
-            <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource PositiveButton}"
+            <Button Click="ServiceButton_Click" Grid.Row="1" Grid.Column="0" Style="{StaticResource PositiveButton}"
                     Margin="100 15 100 15">
                 Услуга 3
             </Button>
 
-            <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource NegativeButton}"
+            <Button Click= "CancelButton_Click" Grid.Row="2" Grid.Column="0" Style="{StaticResource NegativeButton}"
                     Margin="100 15 100 15">
                 Отмена
             </Button>
 
-            <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource PositiveButton}"
+            <Button Click="ServiceButton_Click" Grid.Row="0" Grid.Column="1" Style="{StaticResource PositiveButton}"
                     Margin="100 15 100 15">
                 Услуга 2
             </Button>
 
-            <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource PositiveButton}"
+            <Button Click="ServiceButton_Click" Grid.Row="1" Grid.Column="1" Style="{StaticResource PositiveButton}"
                     Margin="100 15 100 15">
                 Услуга 4
             </Button>

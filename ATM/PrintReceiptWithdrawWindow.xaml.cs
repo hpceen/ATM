@@ -11,15 +11,16 @@ public partial class PrintReceiptWithdrawWindow : Window
 
     private void NoReceipt_Click(object sender, RoutedEventArgs e)
     {
-        var takeCardWindow = new TakeCardWindow();
-        takeCardWindow.Show();
+        var takeBillsWithdrawWindow = new TakeBillsWithdrawWindow();
+        takeBillsWithdrawWindow.Show();
         Close();
     }
 
     private void YesReceipt_Click(object sender, RoutedEventArgs e)
     {
-        var takeCardWindow = new TakeCardWindow();
-        takeCardWindow.Show();
+        //TODO печать чека WithdrawWindow
+        var takeBillsWithdrawWindow = new TakeBillsWithdrawWindow();
+        takeBillsWithdrawWindow.Show();
         Close();
     }
 }
