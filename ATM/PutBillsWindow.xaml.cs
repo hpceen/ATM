@@ -4,6 +4,8 @@ namespace ATM;
 
 public partial class PutBillsWindow : Window
 {
+    private const int DepositedSum = 12000;
+
     public PutBillsWindow()
     {
         InitializeComponent();
@@ -18,7 +20,7 @@ public partial class PutBillsWindow : Window
 
     private void ContinueButton_Click(object sender, RoutedEventArgs e)
     {
-        var cashDepositedWindow = new CashDepositedWindow();
+        var cashDepositedWindow = new CashDepositedWindow(DepositedSum);
         cashDepositedWindow.Show();
         Close();
     }

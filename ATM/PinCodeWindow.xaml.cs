@@ -6,12 +6,14 @@ namespace ATM;
 
 public partial class PinCodeWindow : Window
 {
-    private readonly Card cardInfo = (Application.Current as App)!.CardInfo;
+    private int _counter = 5;
+
+    private readonly Card _cardInfo = (Application.Current as App)!.CardInfo;
 
     public PinCodeWindow()
     {
         InitializeComponent();
-        GreetingTextBlock.Text = $"Здравствуйте {cardInfo.ClientName}";
+        GreetingTextBlock.Text = $"Здравствуйте {_cardInfo.ClientName}";
     }
 
     private void CancelButton_Click(object sender, RoutedEventArgs e)
@@ -23,10 +25,15 @@ public partial class PinCodeWindow : Window
 
     private void ContinueButton_Click(object sender, RoutedEventArgs e)
     {
-        if (PinCodeBox.Password != cardInfo.PinCode)
+        if (PinCodeBox.Password != _cardInfo.PinCode)
         {
-            EnterPinTextBlock.Text = "Повторите ввод пинкода";
+            _counter--;
+            EnterPinTextBlock.Text = $"Повторите ввод пинкода\nОсталось попыток {_counter}";
             EnterPinTextBlock.Foreground = Brushes.Red;
+            if (_counter != 0) return;
+            var takeCardWindow = new TakeCardWindow();
+            takeCardWindow.Show();
+            Close();
             return;
         }
 

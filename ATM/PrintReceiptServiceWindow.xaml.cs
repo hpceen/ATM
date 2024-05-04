@@ -4,7 +4,7 @@ namespace ATM;
 
 public partial class PrintReceiptServiceWindow : Window
 {
-    public PrintReceiptServiceWindow()
+    public PrintReceiptServiceWindow(string serviceName)
     {
         InitializeComponent();
     }

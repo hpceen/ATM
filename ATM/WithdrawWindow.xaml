@@ -8,9 +8,13 @@
         WindowStyle="None"
         Title="PinCodeWindow" Width="1920" Height="1080">
     <DockPanel LastChildFill="True">
-        <TextBlock x:Name="TextBlock" FontSize="80" TextAlignment="Center" DockPanel.Dock="Top"
-                   Margin="100 50">
+        <TextBlock FontSize="80" TextAlignment="Center" DockPanel.Dock="Top"
+                   Margin="100 50 100 0">
             Введите сумму
+        </TextBlock>
+        <TextBlock x:Name="NotEnoughTextBlock" FontSize="80" TextAlignment="Center" DockPanel.Dock="Top"
+                   Margin="100 0 100 50" Visibility="Collapsed" Foreground="Red">
+            Недостаточно средств на балансе!
         </TextBlock>
 
         <Grid DockPanel.Dock="Bottom">
@@ -35,10 +39,10 @@
             <Button Click="ContinueButton_Click" Grid.Row="1" Grid.Column="1" Style="{StaticResource PositiveButton}"
                     Margin="100 15 100 15">
                 Продолжить
-            </Button>   
+            </Button>
         </Grid>
 
-        <TextBox FontSize="80" Width="600" VerticalAlignment="Center"
+        <TextBox x:Name="WithdrawSumTextBox" FontSize="80" Width="600" VerticalAlignment="Center"
                  HorizontalContentAlignment="Center"
                  Background="{StaticResource BLightGray}">
         </TextBox>

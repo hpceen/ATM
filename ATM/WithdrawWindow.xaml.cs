@@ -1,3 +1,4 @@
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -19,7 +20,14 @@ public partial class WithdrawWindow : Window
 
     private void ContinueButton_Click(object sender, RoutedEventArgs e)
     {
-        //TODO Проверка на количество денег на счету
+        var app = (Application.Current as App)!;
+        var withdrawSum = Convert.ToInt32(WithdrawSumTextBox.Text);
+        if (withdrawSum >= app.CardInfo.Balance)
+        {
+            NotEnoughTextBlock.Visibility = Visibility.Visible;
+            return;
+        }
+
         var printReceiptWithdrawWindow = new PrintReceiptWithdrawWindow();
         printReceiptWithdrawWindow.Show();
         Close();
@@ -27,6 +35,6 @@ public partial class WithdrawWindow : Window
 
     private void ClearButton_Click(object sender, RoutedEventArgs e)
     {
-        TextBlock.Text = "";
+        WithdrawSumTextBox.Text = "";
     }
 }

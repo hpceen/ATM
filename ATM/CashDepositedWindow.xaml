@@ -34,7 +34,7 @@
                        Margin="100 0">
                 Внесено наличных:
             </TextBlock>
-            <TextBlock Background="{StaticResource BLightGray}" Grid.Row="1" FontSize="80" TextAlignment="Center"
+            <TextBlock x:Name="DepositedSum" Background="{StaticResource BLightGray}" Grid.Row="1" FontSize="80" TextAlignment="Center"
                        VerticalAlignment="Center"
                        DockPanel.Dock="Top"
                        Width="600">

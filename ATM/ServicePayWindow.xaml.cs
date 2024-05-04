@@ -5,8 +5,11 @@ namespace ATM;
 
 public partial class ServicePayWindow : Window
 {
+    private readonly string _serviceName;
+
     public ServicePayWindow(string serviceName)
     {
+        _serviceName = serviceName;
         InitializeComponent();
     }
 
@@ -19,14 +22,21 @@ public partial class ServicePayWindow : Window
 
     private void ContinueButton_Click(object sender, RoutedEventArgs e)
     {
-        //TODO проверка на количество денег на счету
-        var printReceiptServiceWindow = new PrintReceiptServiceWindow();
+        var app = (Application.Current as App)!;
+        var withdrawSum = Convert.ToInt32(ServicePaySumTextBox.Text);
+        if (withdrawSum >= app.CardInfo.Balance)
+        {
+            NotEnoughTextBlock.Visibility = Visibility.Visible;
+            return;
+        }
+
+        var printReceiptServiceWindow = new PrintReceiptServiceWindow(_serviceName);
         printReceiptServiceWindow.Show();
         Close();
     }
 
     private void ClearButton_Click(object sender, RoutedEventArgs e)
     {
-        TextBlock.Text = "";
+        ServicePaySumTextBox.Text = "";
     }
 }
