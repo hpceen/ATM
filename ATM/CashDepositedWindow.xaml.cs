@@ -24,7 +24,7 @@ public partial class CashDepositedWindow : Window
     {
         var app = (Application.Current as App)!;
         app.CardInfo.Balance += _depositedSum;
-        var printReceiptDepositWindow = new PrintReceiptDepositWindow();
+        var printReceiptDepositWindow = new PrintReceiptDepositWindow(_depositedSum);
         printReceiptDepositWindow.Show();
         Close();
     }

@@ -8,8 +8,10 @@
         WindowStyle="None"
         Title="PinCodeWindow" Width="1920" Height="1080">
     <DockPanel LastChildFill="False">
-        <TextBlock FontSize="80" TextAlignment="Center" DockPanel.Dock="Top" Margin="100 50">Выберите процедуру</TextBlock>
-
+        <TextBlock FontSize="80" TextAlignment="Center" DockPanel.Dock="Top" Margin="100 0 100 50">Выберите процедуру</TextBlock>
+        <TextBlock x:Name="BalanceTextBlock" FontSize="80" TextAlignment="Center" DockPanel.Dock="Top"
+                   Margin="100 0 100 50">
+        </TextBlock>
         <Grid DockPanel.Dock="Bottom">
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -19,7 +21,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Button Click="DepositButton_Click" Grid.Row="0" Grid.Column="0" Style="{StaticResource PositiveButton}" 
+            <Button Click="DepositButton_Click" Grid.Row="0" Grid.Column="0" Style="{StaticResource PositiveButton}"
                     Margin="100 15 100 15">
                 Внести
             </Button>
@@ -29,12 +31,13 @@
                 Отмена
             </Button>
 
-            <Button Click="WithdrawButton_Click"  Grid.Row="0" Grid.Column="1" Style="{StaticResource PositiveButton}" 
+            <Button Click="WithdrawButton_Click" Grid.Row="0" Grid.Column="1" Style="{StaticResource PositiveButton}"
                     Margin="100 15 100 15">
                 Снять
             </Button>
 
-            <Button Click="ChooseServiceButton_Click" Grid.Row="1" Grid.Column="1" Style="{StaticResource PositiveButton}" 
+            <Button Click="ChooseServiceButton_Click" Grid.Row="1" Grid.Column="1"
+                    Style="{StaticResource PositiveButton}"
                     Margin="100 15 100 15">
                 Оплатить
             </Button>

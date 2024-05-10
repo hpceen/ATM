@@ -21,14 +21,15 @@ public partial class WithdrawWindow : Window
     private void ContinueButton_Click(object sender, RoutedEventArgs e)
     {
         var app = (Application.Current as App)!;
-        var withdrawSum = Convert.ToInt32(WithdrawSumTextBox.Text);
+        var withdrawSum = Convert.ToDouble(WithdrawSumTextBox.Text);
         if (withdrawSum >= app.CardInfo.Balance)
         {
             NotEnoughTextBlock.Visibility = Visibility.Visible;
             return;
         }
 
-        var printReceiptWithdrawWindow = new PrintReceiptWithdrawWindow();
+        app.CardInfo.Balance -= withdrawSum;
+        var printReceiptWithdrawWindow = new PrintReceiptWithdrawWindow(withdrawSum);
         printReceiptWithdrawWindow.Show();
         Close();
     }

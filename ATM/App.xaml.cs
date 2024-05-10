@@ -9,7 +9,7 @@ namespace ATM;
 public partial class App : Application
 {
     public readonly SqliteConnection Connection = new(
-        new SqliteConnectionStringBuilder(@"Data Source=C:\Users\HPCeen\RiderProjects\ATM\db;")
+        new SqliteConnectionStringBuilder(@"Data Source=C:\Users\HPCee\RiderProjects\ATM\db;")
         {
             Mode = SqliteOpenMode.ReadWrite,
         }.ToString());

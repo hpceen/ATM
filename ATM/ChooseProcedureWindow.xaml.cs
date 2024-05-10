@@ -7,6 +7,7 @@ public partial class ChooseProcedureWindow : Window
     public ChooseProcedureWindow()
     {
         InitializeComponent();
+        BalanceTextBlock.Text = $"Баланс: {(Application.Current as App)!.CardInfo.Balance}";
     }
 
     private void CancelButton_Click(object sender, RoutedEventArgs e)

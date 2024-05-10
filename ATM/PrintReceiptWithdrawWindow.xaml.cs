@@ -1,12 +1,17 @@
+using System;
+using System.IO;
 using System.Windows;
 
 namespace ATM;
 
 public partial class PrintReceiptWithdrawWindow : Window
 {
-    public PrintReceiptWithdrawWindow()
+    private readonly double _withdrawSum;
+
+    public PrintReceiptWithdrawWindow(double withdrawSum)
     {
         InitializeComponent();
+        _withdrawSum = withdrawSum;
     }
 
     private void NoReceipt_Click(object sender, RoutedEventArgs e)
@@ -18,7 +23,8 @@ public partial class PrintReceiptWithdrawWindow : Window
 
     private void YesReceipt_Click(object sender, RoutedEventArgs e)
     {
-        //TODO печать чека WithdrawWindow
+        var receiptString = $"{DateTime.Now}\nПроцедура: Снятие\nСнято средств: {_withdrawSum}";
+        File.WriteAllText("receipt.txt", receiptString);
         var takeBillsWithdrawWindow = new TakeBillsWithdrawWindow();
         takeBillsWithdrawWindow.Show();
         Close();
